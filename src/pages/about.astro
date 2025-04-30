@@ -1,4 +1,8 @@
+
 ---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
 const pageTitle = "About Sophia";
 const identity = {
 	firstName: 'Sophia',
@@ -18,10 +22,9 @@ const skills = ['Excel','SQL','Python'];
 		<title>{pageTitle}</title>
 	</head>
 	</body>
-	<a href="/">Home</a>
-	<a href="/about">About</a>
-	<a href="/blog/">Blog</a>
-		<h1>About Me</h1>
+	<Navigation />
+
+		<h1>{pageTitle}</h1>
 		<h2>... and my new Astro site!</h2>
 	  
 		<p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
@@ -39,5 +42,6 @@ const skills = ['Excel','SQL','Python'];
 		<ul>
 			{skills.map((skill) => <li>{skill}</li>)}
 		</ul>
+		<Footer/>
 	</body>
 </html>
